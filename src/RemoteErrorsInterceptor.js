@@ -33,7 +33,7 @@ const RemoteErrorsInterceptor = ({ dispatch, errors }) => {
         if (keysAndValues.length === 0) {
           return;
         }
-        let keys = keysAndValues.map(kv => kv.name);
+        let keys = keysAndValues.map(kv => kv.name.split(".")[0];
         let modifiedFields = Object.keys(dirtyFieldsSinceLastSubmit).filter(
           key =>
             dirtyFieldsSinceLastSubmit[key] === true && keys.indexOf(key) !== -1
